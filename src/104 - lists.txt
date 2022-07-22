@@ -1,0 +1,68 @@
+@@@
+# We can define lists like this:
+small_numbers = [5, 2, 9, 8, 2]
+big_numbers = [42, 64, 98, 57, 57, 28]
+print(small_numbers)
+print(big_numbers)
+@@@
+# We can concatenate lists by adding them:
+all_numbers = small_numbers + big_numbers
+print(all_numbers)
+@@@
+# We can add elements to lists like this:
+more_numbers = small_numbers + [7, 6, 1, 5]
+print(more_numbers)
+@@@
+# Also like this:
+big_numbers.append(74)
+big_numbers.append(47)
+print(big_numbers)
+@@@
+# We can remove elements from lists, like this:
+some_numbers = [4, 2, 1, 6, 6, 9]
+print(some_numbers)
+print("removing 6...")
+small_numbers.remove(6)
+print(some_numbers)
+print("removing 6 again...")
+small_numbers.remove(6)
+print(some_numbers)
+print("removing 6 one more time (this will fail...)")
+small_numbers.remove(6)
+print(some_numbers)
+@@@
+# We can check if a number is in a list like this:
+if 5 is in small_numbers:
+  print("5 is in small_numbers:", small_numbers)
+else:
+  print("5 is not in small_numbers:", small_numbers)
+@@@
+# Here are two lists for the next exercise...
+list1 = [1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25]
+list2 = [1, 4, 9, 16, 25]
+@@@
+# EXERCISE: show the numbers that belong to BOTH lists
+@@@
+# We can count how many times a number is in a list:
+print(small_numbers.count(2))
+print(small_numbers.count(15))
+@@@
+# EXERCISE: show the numbers that appear more than one time
+# in the lists small_numbers and big_numbers
+@@@
+# We can access list elements with their indexes, like this:
+print("The first element of small_numbers is", small_numbers[0])
+print("The second element of small_numbers is", small_numbers[1])
+print("The last element of small_numbers is", small_numbers[-1])
+# Note: the first element has index zero
+# Note: we can access elements from the end of the list with
+# negative indexes (but they start at -1, not -0, because in maths
+# -0 and 0 are the same, so we can't make the difference between them!)
+@@@
+# EXERCISE: exchange the first and last element of that list
+the_list = [1, 2, 3, 4]
+@@@
+# EXERCISE: here is a list with duplicates. Create a new list,
+# without the duplicates:
+list_with_duplicates = [55, 6, 8, 55, 0, 3, 55, 0, -15, -3, -3]
+# (So the result should be a list like [55, 6, 8, 0, 3, -15, -3])

@@ -1,0 +1,73 @@
+@@@
+# Reminder on "for loops":
+week = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+for day in week:
+  print(day)
+@@@
+french_week = ["Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi", "Samedi", "Dimanche"]
+print(french_week)
+@@@
+# EXERCISE: display the french week, one day per line.
+@@@
+# EXERCISE: display the french week, one day, per line, but just show the first
+# two letters of each day. So the output should look like this:
+# Lu
+# Ma
+# Me
+# etc.
+@@@
+# Reminder: we can "concatenate" strings with + , for instance:
+firstname = "Jérôme"
+lastname = "Petazzoni"
+fullname = firstname + " " + lastname
+print(fullname)
+@@@
+# We can concatenate in a for loop by "accumulating" in a variable.
+# For instance:
+all_the_days = ""
+for day in week:
+  all_the_days = all_the_days + day
+print(all_the_days)
+@@@
+# EXERCISE: the example in the previous cell did put all the days mushed together.
+# Write code so that the days are separated by a space, like this:
+# Monday Tuesday Wednesday etc.
+@@@
+# EXERCISE: generate a string with the first letter of each day of the week of the French week.
+# So, that should be: LMMJVSD
+@@@
+# EXERCISE: generate a string with the first 3 letters of each day of the English week, separated by spaces.
+# So, the string should be: Mon Tue Wed Thu Fri Sat Sun
+@@@
+# We can check if a string is in another string with "in".
+# Example:
+lastname = "Petazzoni"
+print("taz" in lastname) # prints True
+print("haha" in lastname) # prints False
+if "zo" in lastname:
+  print("zo is in lastname")
+else:
+  print("zo is NOT in lastname")
+@@@
+# We can do tests in for loops, for instance:
+names = ["Alice", "Bob", "Charles"]
+for name in names:
+  if "e" in name:
+    print("there is a 'e' in " + name)
+  else:
+    print("there is no 'e' in " + name)
+@@@
+# EXERCISE: print the days of the french week that have the letter 'a' in them.
+@@@
+# We can get the first letters of a string like this:
+alphabet = "abcdefghijklmnopqrstuvwxyz"
+first_three_letters = alphabet[:3]
+# But we can also get the last letters like this:
+last_four_letters = alphabet[-4:]
+print(first_three_letters)
+print(last_four_letters)
+# ⚠️ PAY ATTENTION to the position of the ":"
+# when we want the first X letters, it is [:X]
+# when we want the last X letters, it is [-X:]
+@@@
+# EXERCISE: print the days of the french week that finish with "di"

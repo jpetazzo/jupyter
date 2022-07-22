@@ -1,0 +1,71 @@
+@@@
+# Let's define a few variables!
+firstname = "Jérôme"
+lastname = "Petazzoni"
+x = 1
+y = 42
+z = 60
+@@@
+# Now print some of them
+print(firstname)
+print(y)
+@@@
+# We can do some math
+total = x + y + z
+print(total)
+@@@
+# Hey look we can also add strings!
+# We call that "concatenate" strings.
+fullname = firstname + lastname
+print(fullname)
+@@@
+# But, the two strings were mushed together...
+# So let's add a space between them.
+fullname = firstname + " " + lastname
+print(fullname)
+@@@
+# EXERCISE:
+# 1) put your first name in a variable
+# 2) put your last name in a variable
+# 3) define a third variable that will have your full name, but like this:
+# "Petazzoni, Jérôme" (last name - comma - space - first name)
+# 4) print that variable
+@@@
+# Lists!
+months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
+week = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+prime_numbers = [2, 3, 5, 7, 11, 13, 17, 19]
+print(months)
+print(week)
+print(prime_numbers)
+@@@
+# We can access individual elements by using square brackets and indexes.
+# It works like this, and it starts at zero:
+print(week[0])
+print(week[1])
+@@@
+# EXERCISE: print the first three months of the year
+@@@
+# We can also use the brackets and indexes with strings:
+initials = firstname[0] + lastname[0]
+print(initials)
+@@@
+# EXERCISE: print the first 3 letters of each day of the week.
+# Print one day per line, so the output should look like this:
+# Mon
+# Tue
+# Wed
+# Thu
+# etc.
+@@@
+# By using a "for loop", we can repeat a given piece of code multiple times.
+# For instance:
+print("this is executed only once, before the for loop")
+for day in week:
+  print("we are now within the for loop, this will be shown once per day")
+  print("the day is: " + day)
+print("this is executed only once, after the for loop")
+@@@
+# EXERCISE: print the first 3 letters of each day of the week,
+# by using a for loop so that the code is more concise.
+# If you already used a for loop in the previous exdercise, congrats!
