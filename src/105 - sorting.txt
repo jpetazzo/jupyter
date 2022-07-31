@@ -1,0 +1,61 @@
+# In this series, we're going to work on a very classical problem: sorting!
+# We're going to implement a very naive algorithm: "selection sort".
+# "Naive" means that it will look simple, but it won't perform very
+# well. In other words, it will be much smaller than other algorithms.
+# 💡 Selection sort has a "quadratic complexity", or O(n²).
+# Better algorithms will have O(n·log(n)) complexity.
+@@@
+# EXERCISE: first, write code to find the smallest element in the list.
+# (Yes, we've done this before, but we'll need it in a short while!)
+input_list = [5, 2, 19, 19, 8, 4, 13, 12, 11, 2]
+@@@
+# If we need to repeat something until some condition is met, we can
+# use a "while loop". A while loop looks like this:
+n = 0
+while n*n < 111:
+    print(n*n)
+    n = n + 1
+# (This prints the squares below 111.)
+@@@
+# EXERCISE: write all the numbers from 10 down to 0 .
+# (Like a rocket countdown!)
+@@@
+# If we want to test if a list is empty, we can check its length:
+the_list = [1, 10, 100]
+if len(the_list)==0:
+  print("the list is empty")
+else:
+  print("the list is not empty, its first element is", the_list[0])
+@@@
+# So, if we want to test if a list has at least one element, we can do:
+if len(the_list) > 0:
+  print("the first element of the list is", the_list[0])
+else:
+  print("the list is empty")
+@@@
+# Bonus: we can also use the list as a boolean value.
+# In these contexts, an empty list is False, and a non-empty list is True.
+# WTF does that mean? It means that if we use the list in a context
+# where we expect a condition (e.g. "if"), we can do this:
+if the_list:
+  print("the list has elements, and the first one is", the_list[0])
+else:
+  print("leider ist die Liste lehr!")
+@@@
+# EXERCISE: write code that empties a list.
+# i.e. at the beginning the list is full, at the end it's empty!
+# (WITHOUT doing the obvious, i.e. the_list = [] 😁)
+the_list = [2, 42, 1, 45, 64, 99, 13]
+@@@
+# Alright, with that, we should be able to implement selection sort!
+# The idea of selection sort is relatively simple.
+# We work with an input list (the list of things we want to sort), and
+# an output list (which is empty at the beginning).
+# And we do this:
+# 1) find the smallest element in the input list
+# 2) add that element at the end of the output list
+# 3) remove that element from the input list
+# 4) repeat until input list is empty
+@@@
+# EXERCISE: write code to sort the list below.
+input_list = [5, 2, 19, 19, 8, 4, 13, 12, 11, 2]

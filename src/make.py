@@ -3,9 +3,8 @@
 import glob
 import json
 
-cells = []
-
 for source_file in glob.glob("*.txt"):
+  cells = []
   for snippet in open(source_file).read().split("@@@"):
     snippet = snippet.strip()
     if not snippet:
