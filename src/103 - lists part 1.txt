@@ -1,0 +1,34 @@
+# This will generate a random array (or list) of numbers that we will use later.
+import random
+how_many_numbers = 20
+numbers = []
+for i in range(how_many_numbers):
+  numbers = numbers + [random.randint(1, 100)]
+print(numbers)
+@@@
+# We can access elements in an array by using their "index", that is, their position
+# in the array. Index starts at zero.
+print("Showing the first element of the array:")
+print(numbers[0])
+print("Showing the second element of the array:")
+print(numbers[1])
+@@@
+# We can see the length of an array with the len() function, like this:
+print("This is the array:")
+print(numbers)
+print("This is the length of the array:")
+print(len(numbers))
+@@@
+# We can "iterate" on the array, which means execute a piece of code
+# one time for each element of the array.
+print("Let's print each element of the array individually!")
+for element in numbers:
+  print("The next element is:")
+  print(element)
+print("We're done!")
+@@@
+# EXERCISE: find the biggest number in the list of numbers.
+@@@
+# EXERCISE: find the smallest number in the list of numbers.
+@@@
+# EXERCISE: find the two smallest numbers in the list of numbers.
