@@ -1,0 +1,91 @@
+# Let's learn about FUNCTIONS!
+# When there is code that we need to use in different places,
+# or in slightly different ways, it often makes sense to write
+# a "function". Then we can "call" or "invoke" or "execute"
+# that function to run the corresponding code.
+@@@
+# EXAMPLE: the following function writes a separator line.
+def line():
+  print("-----------------------------------------------")
+# Then we can use it:
+line()
+print("Hello!")
+line()
+@@@
+# A function can take "parameters" or "arguments".
+# For instance, the following function will print a convoluted salutation:
+def greet(name):
+  print("Well, hello, "+name+". It's a pleasure to meet you!")
+greet("Alice")
+greet("Bob")
+for person in ["Charlie", "Diana", "Ellie", "Fox"]:
+  greet(person)
+# Much better than if we had to manually write all that code, right?
+@@@
+# EXERCISE: write a function named "underline" that takes a single line of text,
+# and puts a line below it. The line should have the same length as the line
+# of text; visually, it should look like the text was underlined.
+# For instance:
+#
+# underline("hello world")
+#
+# Should print:
+#
+# hello world
+# -----------
+#
+# Hint: the "len" function can be used to know the length of a string.
+@@@
+# EXERCISE: write a function named "starframe" that prints a single line
+# of text with a frame made of stars around it. For instance:
+#
+# starframe("hello world")
+#
+# Should print:
+#
+# ***************
+# * hello world *
+# ***************
+@@@
+# EXERCISE: write a function named "straightframe" that prints a single line
+# of text with a frame around it, using characters "+-|". For instance:
+#
+# straightframe("hello world")
+#
+# Should print:
+#
+# +-------------+
+# | hello world |
+# +-------------+
+@@@
+# Functions can also "return" something.
+# For instance, in maths, we could say something like:
+#
+# let f be the function defined as f(x) = x²
+#
+# In Python, one way to write that would be:
+def f(x):
+  return x*x
+# Then we can call that function:
+print(f(5))
+@@@
+# Functions can have multiple lines and do some fancy logic, and even have
+# multiple "return" branches. For instance:
+def celestial(name):
+  # put the name in lowercase, so that we don't have to worry about "sun" vs "Sun"
+  name = name.lower()
+  if name=="sun":
+    return "It's a star."
+  if name in ["mercury", "venus", "earth", "mars", "jupiter", "saturn", "uranus", "neptune"]:
+    return "It's a planet."
+  if name=="pluto":
+    return "It was a planet."
+  return "I don't know what it is."
+print(celestial("mars"))
+print(celestial("Saturn"))
+print(celestial("SUN"))
+print(celestial("alpha centauri"))
+@@@
+# EXERCISE: write a function "vowels" that returns the number of vowels in a
+# string passed as an argument. Vowels will be defined as "aeiouy".
+# For instance, vowels("hello world") should return 3.
